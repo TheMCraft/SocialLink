@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS "users" (
+CREATE TABLE IF NOT EXISTS "sociallink_users" (
    "id" SERIAL PRIMARY KEY,
    "discord_id" VARCHAR(255) UNIQUE NOT NULL,
    "minecraft_token" VARCHAR(255) DEFAULT NULL,

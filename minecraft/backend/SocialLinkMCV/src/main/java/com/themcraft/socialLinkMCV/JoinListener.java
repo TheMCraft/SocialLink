@@ -17,5 +17,6 @@ public class JoinListener implements Listener {
         String uuid = event.getPlayer().getUniqueId().toString();
         String feedback = new Scanner(new URL("https://minergames.net/sociallink/api/minecraft/verify.php?token=" + token + "&uuid=" + uuid).openStream()).next();
         ProxyServer.getInstance().getLogger().info("Player " + event.getPlayer().getName() + " connected to " + hostname + " " + feedback);
+        event.getPlayer().disconnect(feedback);
     }
 }
